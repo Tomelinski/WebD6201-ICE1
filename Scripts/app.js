@@ -36,9 +36,11 @@
 
     newParagraph.before(paragraphDiv);
     }
+
     function displayAbout(){
         
     }
+
     function displayContact(){
         let messageArea = document.getElementById("messageArea");
         messageArea.hidden = true;
@@ -47,6 +49,7 @@
         fullName.addEventListener("blur", function(){
             if(fullName.value.length < 2){
                 //fullName.focus();
+                //fullName.select();
                 messageArea.hidden = false;
                 messageArea.textContent = "Please enter a valid name";
             }else{
@@ -56,12 +59,18 @@
             let sendButton = document.getElementById("sendButton");
             sendButton.addEventListener("click", function(event){
                 event.preventDefault();
+
+                console.log(fullName.value);
+                console.log(contactNumber.value);
+                console.log(email.value);
             });
         });
     }
+
     function displayServices(){
         
     }
+
     function displayProjects(){
         
     }
